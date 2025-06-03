@@ -1,0 +1,54 @@
+.Botonera {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.btn {
+  padding: 0.4rem 0.9rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.btn.iniciar {
+  background-color: #ffb347;
+}
+
+.btn.iniciar:hover {
+  background-color: #ffa733;
+}
+
+.btn.detener {
+  background-color: #e57373;
+}
+
+.btn.detener:hover {
+  background-color: #e05d5d;
+}
+
+.btn.completar {
+  background-color: #81c784;
+}
+
+.btn.completar:hover {
+  background-color: #66bb6a;
+}
+.btn.no-completar { 
+  background-color: #7c4038;
+}
+.btn.no-completar:hover { 
+  background-color: #c06359;
+}
+.btn.eliminar{
+  background-color: black;
+  color: white;
+}
+.btn.detener:hover{
+  background-color: rgb(29, 28, 28);
+}

@@ -1,1 +1,69 @@
-[]
+[
+  {
+    "id": 1748965806128,
+    "nombre": "n4",
+    "descripcion": "",
+    "etiquetas": [],
+    "estado": "en progreso",
+    "creada": "2025-06-03T15:50:06.128Z",
+    "iniciada": "2025-06-03T18:09:58.256Z",
+    "detenida": "2025-06-03T18:09:55.447Z",
+    "duracion_tota_segundos": 0,
+    "duracion_total_segundos": null
+  },
+  {
+    "id": 1748966927187,
+    "nombre": "q",
+    "descripcion": "",
+    "etiquetas": [],
+    "estado": "en progreso",
+    "creada": "2025-06-03T16:08:47.188Z",
+    "iniciada": "2025-06-03T16:37:33.974Z",
+    "detenida": null,
+    "duracion_tota_segundos": 0
+  },
+  {
+    "id": 1748968443994,
+    "nombre": "q",
+    "descripcion": "",
+    "etiquetas": [],
+    "estado": "en progreso",
+    "creada": "2025-06-03T16:34:03.994Z",
+    "iniciada": "2025-06-03T16:37:35.482Z",
+    "detenida": null,
+    "duracion_tota_segundos": 0
+  },
+  {
+    "id": 1748969525585,
+    "nombre": "2",
+    "descripcion": "",
+    "etiquetas": [],
+    "estado": "en progreso",
+    "creada": "2025-06-03T16:52:05.585Z",
+    "iniciada": "2025-06-03T16:52:09.104Z",
+    "detenida": null,
+    "duracion_tota_segundos": 0
+  },
+  {
+    "id": 1748970351387,
+    "nombre": "1",
+    "descripcion": "2",
+    "etiquetas": [],
+    "estado": "en progreso",
+    "creada": "2025-06-03T17:05:51.387Z",
+    "iniciada": "2025-06-03T17:06:02.464Z",
+    "detenida": null,
+    "duracion_tota_segundos": 0
+  },
+  {
+    "id": 1748971268103,
+    "nombre": "qe",
+    "etiquetas": [],
+    "estado": "en progreso",
+    "creada": "2025-06-03T17:21:08.103Z",
+    "iniciada": "2025-06-03T18:26:41.197Z",
+    "detenida": "2025-06-03T18:26:39.840Z",
+    "duracion_tota_segundos": 0,
+    "duracion_total_segundos": 421
+  }
+]

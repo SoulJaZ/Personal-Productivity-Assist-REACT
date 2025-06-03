@@ -1,0 +1,146 @@
+/* Estilo inspirado en foodie-marketing.com.au */
+.lista-contenedor {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+/* botones.css */
+.btn-agregar {
+  align-self: flex-end;
+  background-color: #ffa733;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font-family: 'Helvetica Neue', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.btn-agregar:hover {
+  background-color: #ff9500;
+}
+
+.titulo-lista {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.lista-tareas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tarea-item {
+  background-color: #f9f6f3;
+  border: 1px solid #e9e4e0;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.2s ease;
+}
+
+.tarea-item:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* 🔸 Estilo específico para modo resumen */
+.tarea-item.resumen {
+  background-color: #fefdfc;
+  border: 1px dashed #dcd2c0;
+  padding: 0.7rem 1rem;
+  font-size: 0.9rem;
+  box-shadow: none;
+}
+
+.tarea-item.resumen .titulo-tarea {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+}
+
+.tarea-item.resumen .estado-tarea,
+.tarea-item.resumen .descripcion-tarea,
+.tarea-item.resumen .fecha-creada,
+.tarea-item.resumen .fecha-detenida {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* Ocultar acciones en modo resumen si se usan estilos por clase */
+.tarea-item.resumen .acciones-tarea {
+  display: none;
+}
+
+.contenido-tarea {
+  display: grid;
+  grid-template-columns: 1fr auto; /* contenido + botones */
+  grid-template-areas:
+    "titulo estado"
+    "descripcion descripcion"
+    "creada detenida"
+    "acciones acciones";
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.contenido-tarea:hover {
+  background-color: #f0f0f0;
+}
+
+.titulo-tarea {
+  grid-area: titulo;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.estado-tarea {
+  grid-area: estado;
+  text-align: right;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+.descripcion-tarea {
+  grid-area: descripcion;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+.fecha-creada {
+  grid-area: creada;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.fecha-detenida {
+  grid-area: detenida;
+  font-size: 0.85rem;
+  color: #888;
+  text-align: right;
+}
+
+.acciones-tarea {
+  grid-area: acciones;
+  text-align: right;
+}
+

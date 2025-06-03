@@ -1,0 +1,57 @@
+/* Estilo inspirado en foodie-marketing.com.au */
+.lista-contenedor {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.titulo-lista {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.lista-tareas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tarea-item {
+  background-color: #f9f6f3;
+  border: 1px solid #e9e4e0;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.2s ease;
+}
+
+.tarea-item:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.contenido-tarea {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.titulo-tarea {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.estado-tarea {
+  font-size: 0.9rem;
+  color: #999;
+  font-style: italic;
+}
