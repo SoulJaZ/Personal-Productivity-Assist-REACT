@@ -44,6 +44,7 @@ function TareaLista() {
                 tarea={t}
                 onActualizar={actualizarTarea}
                 recargarTareas={cargarTareas}
+                modo={tareas.modo}
               />
             ))}
           </AnimatePresence>

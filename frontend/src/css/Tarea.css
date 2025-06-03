@@ -1,6 +1,6 @@
 /* Estilo inspirado en foodie-marketing.com.au */
 .lista-contenedor {
-  max-width: 600px;
+  width: 600px;
   margin: 2rem auto;
   padding: 2rem;
   background-color: #ffffff;

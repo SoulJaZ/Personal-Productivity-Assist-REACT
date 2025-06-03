@@ -1,0 +1,16 @@
+.planner-contenedor {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #fffefb;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.planner-titulo {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
