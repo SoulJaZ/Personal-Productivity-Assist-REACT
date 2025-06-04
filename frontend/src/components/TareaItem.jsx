@@ -1,40 +1,45 @@
 // components/TareaItem.jsx
 import { motion } from "framer-motion";
+import { Clock, Pause } from "lucide-react";
 import Botonera from "./Botonera";
 
 function TareaItem({
   tarea,
   onActualizar,
   recargarTareas,
-  modo = "completo", // o "resumen"
+  modo = "completo",
   mostrarFechas = true,
   mostrarDescripcion = true
 }) {
-    
-const claseItem = `tarea-item ${modo === "resumen" ? "resumen" : ""}`;
+  const claseItem = `tarea-item ${modo === "resumen" ? "resumen" : ""}`;
 
-return (
+  return (
     <motion.li
       className={claseItem}
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.3 }}
+      layout
     >
       <div className="contenido-tarea">
-        <span className="titulo-tarea">{tarea.nombre}</span>
+        <h3 className="titulo-tarea">{tarea.nombre}</h3>
         <em className="estado-tarea">{tarea.estado}</em>
 
         {mostrarDescripcion && tarea.descripcion && (
-          <span className="descripcion-tarea">{tarea.descripcion}</span>
+          <p className="descripcion-tarea">{tarea.descripcion}</p>
         )}
 
         {mostrarFechas && (
           <>
-            <span className="fecha-creada">Creada: {tarea.creada}</span>
-            <span className="fecha-detenida">
+            <time className="fecha-creada" dateTime={tarea.creada}>
+              <Clock size={13} style={{ marginRight: '3px' }} />
+              Creada: {tarea.creada}
+            </time>
+            <time className="fecha-detenida" dateTime={tarea.creada}>
+              <Pause size={13} style={{ marginRight: '4px' }} />
               Detenida: {tarea.detenida || "N/A"}
-            </span>
+            </time>
           </>
         )}
 

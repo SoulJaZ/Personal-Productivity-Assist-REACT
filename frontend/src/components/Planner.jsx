@@ -1,24 +1,42 @@
-// pages/Planner.jsx
-import { useState } from "react";
+// Planner.jsx
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { obtenerTareas } from "../services/taskService";
 import TareaLista from "../components/TareaLista";
-import '../css/Planner.css'; // si necesitas estilos específicos
+import Estadisticas from "./Estadisticas";
+
 
 function Planner() {
+  const [tareas, setTareas] = useState([]);
   const [modoVista, setModoVista] = useState("completo");
 
-  const alternarModo = () => {
-    setModoVista((prev) => (prev === "completo" ? "resumen" : "completo"));
+  const cargarTareas = async () => {
+    const data = await obtenerTareas();
+    setTareas(data);
   };
+
+  const actualizarTarea = (id, tareaActualizada) => {
+    setTareas(prev =>
+      prev.map(t => (t.id === id ? { ...t, ...tareaActualizada } : t))
+    );
+  };
+
+  useEffect(() => {
+    cargarTareas();
+  }, []);
 
   return (
     <div className="planner-contenedor">
-      <h1 className="planner-titulo">Mi Planificador Diario</h1>
-
-      <button className="btn-agregar" onClick={alternarModo}>
-        Ver en modo {modoVista === "completo" ? "resumen" : "completo"}
-      </button>
-
-      <TareaLista modo={modoVista} />
+      <Estadisticas tareas={tareas}/>
+      <TareaLista
+        tareas={tareas}
+        modo={modoVista}
+        onActualizar={actualizarTarea}
+        recargarTareas={cargarTareas}
+      />
+      <Link to="/">
+        <button className="btn-ir-planner">Volver</button>
+      </Link>
     </div>
   );
 }

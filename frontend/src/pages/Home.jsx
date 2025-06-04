@@ -66,7 +66,7 @@ function Home() {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
                     >
-                        <TareaLista />
+                        <TareaLista recargar={recargar}/>
                     </motion.div>
                 </AnimatePresence>
             </motion.div>

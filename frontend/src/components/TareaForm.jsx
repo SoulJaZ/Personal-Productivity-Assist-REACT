@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import "../css/TareaForm.css";
 
 function TareaForm({ onTareaCreada }) {
@@ -40,7 +41,11 @@ function TareaForm({ onTareaCreada }) {
   };
 
   return (
-    <form className="formulario" onSubmit={handleSubmit}>
+    <motion.form className="formulario" onSubmit={handleSubmit}
+    initial={{ opacity: 0, y: 40 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+    >
       <input
         value={nombre}
         onChange={(e) => setNombre(e.target.value)}
@@ -77,7 +82,7 @@ function TareaForm({ onTareaCreada }) {
         className="input-tarea"
       />
       <button type="submit" className="btn-agregar">Agregar</button>
-    </form>
+    </motion.form>
   );
 }
 

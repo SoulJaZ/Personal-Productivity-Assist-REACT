@@ -1,11 +1,12 @@
 // components/TareaLista.jsx
 import { useEffect, useState } from "react";
-import { obtenerTareas } from "../services/taskService";
 import { AnimatePresence } from "framer-motion";
-import TareaItem from "./TareaItem"; // Importamos el componente reutilizable
-import '../css/Tarea.css';
+import { obtenerTareas } from "../services/taskService";
+import TareaItem from "../components/TareaItem";
 
-function TareaLista() {
+import "../css/Tarea.css";
+
+function TareaLista({ modo, recargar  }) {
   const [tareas, setTareas] = useState([]);
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
 
@@ -22,8 +23,8 @@ function TareaLista() {
 
   useEffect(() => {
     cargarTareas();
-  }, []);
-
+  }, [recargar]);
+ 
   return (
     <div className="lista-contenedor">
       <h2 className="titulo-lista">Mis Tareas</h2>
@@ -38,15 +39,21 @@ function TareaLista() {
       {mostrarFormulario && (
         <ul className="lista-tareas">
           <AnimatePresence>
-            {tareas.map((t) => (
-              <TareaItem
-                key={t.id}
-                tarea={t}
-                onActualizar={actualizarTarea}
-                recargarTareas={cargarTareas}
-                modo={tareas.modo}
-              />
-            ))}
+            {tareas.length === 0 ? (
+              <p style={{ textAlign: "center", color: "#fff" }}>
+                No tienes tareas pendientes
+              </p>
+            ) : (
+              tareas.map((t) => (
+                <TareaItem
+                  key={t.id}
+                  tarea={t}
+                  modo={modo}
+                  onActualizar={actualizarTarea}
+                  recargarTareas={recargar}
+                />
+              ))
+            )}
           </AnimatePresence>
         </ul>
       )}

@@ -3,11 +3,13 @@
   width: 600px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
   border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
-/* botones.css */
+/* botones.css 
 .btn-agregar {
   align-self: flex-end;
   background-color: #ffa733;
@@ -21,35 +23,32 @@
   font-family: 'Helvetica Neue', sans-serif;
   transition: background-color 0.3s ease;
 }
+*/
 
-.btn-agregar:hover {
-  background-color: #ff9500;
-}
 
 .titulo-lista {
   font-family: 'Helvetica Neue', sans-serif;
+  resize: vertical;
+  transition: all 0.3s ease;
   font-size: 1.8rem;
-  color: #333;
+  color: #faf8f5;
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.3rem;
 }
 
 .lista-tareas {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 10px;
 }
 
 .tarea-item {
-  background-color: #f9f6f3;
-  border: 1px solid #e9e4e0;
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
-  padding: 1rem 1.5rem;
-  margin-bottom: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: box-shadow 0.2s ease;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  justify-content: center;
+  transition: background-color 0.3s ease;
 }
 
 .tarea-item:hover {
@@ -58,11 +57,12 @@
 
 /* 🔸 Estilo específico para modo resumen */
 .tarea-item.resumen {
-  background-color: #fefdfc;
-  border: 1px dashed #dcd2c0;
-  padding: 0.7rem 1rem;
-  font-size: 0.9rem;
-  box-shadow: none;
+   border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  justify-content: center;
+  transition: background-color 0.3s ease;
 }
 
 .tarea-item.resumen .titulo-tarea {
@@ -93,7 +93,7 @@
     "creada detenida"
     "acciones acciones";
   gap: 0.5rem;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 12px;
   background-color: #f9f9f9;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
@@ -116,7 +116,7 @@
   text-align: right;
   font-size: 0.9rem;
   color: #666;
-  font-style: italic;
+  font-family: 'Helvetica Neue', sans-serif;
 }
 
 .descripcion-tarea {

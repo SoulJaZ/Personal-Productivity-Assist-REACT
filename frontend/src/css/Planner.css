@@ -1,16 +1,67 @@
-.planner-contenedor {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 2rem;
-  background-color: #fffefb;
-  border-radius: 1.2rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+/* Fondo general del planner */
+.planner-bg {
+  min-height: 100vh;
+  background: linear-gradient(139deg, #1a1a1a, #2d2d2d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+ 
 }
 
+/* Panel tipo "glassmorphism" */
+.glass-panel {
+
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  width: 1300px;
+}
+
+/* Título elegante */
 .planner-titulo {
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 1.5rem;
-  color: #333;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+/* Botón moderno */
+.btn-agregar {
+  display: inline-block;
+  margin: 0 auto 2rem;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-agregar:hover {
+  background-color: #ff4e4e;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .planner-contenedor {
+    padding: 1.5rem;
+  }
+
+  .planner-titulo {
+    font-size: 1.5rem;
+  }
+
+  .btn-agregar {
+    width: 100%;
+    font-size: 1rem;
+  }
 }
